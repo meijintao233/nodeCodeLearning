@@ -1,8 +1,14 @@
 ## node模块加载
 
-node/lib/internal/bootstarp/loaders.js，这个文件用于创建内部模块以及其使用的绑定加载器，而用户模块的加载则可以使用lib/internal/modules/cjs/loader.js或者lib/internal/modules/esm/*里的方法。
+node/lib/internal/bootstarp/loaders.js，这个文件用于创建builtin模块以及其使用的绑定加载器，而用户模块的加载则可以使用lib/internal/modules/cjs/loader.js或者lib/internal/modules/esm/*里的方法。
 
 该文件在bootstrap/node.js被触发前，会被node.cc编译后运行，所以该加载器会在我们启动node.js之前就已经被启动了。它创建了以下这些对象：c++绑定加载器，js内部模块加载器等。
+
+Node里有以下这几种模块：
+- builtin module: node 中以 c++ 形式提供的模块
+- constants module: Node 中定义常量的模块
+- native module: node 中以js 形式提供的模块
+- 第三方模块: 以上模块统称node内建模块，除此之外即为第三方模块。
 
 #### C++绑定加载器：
 

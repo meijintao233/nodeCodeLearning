@@ -6,7 +6,7 @@ node/lib/internal/bootstarp/loaders.js，这个文件用于创建builtin模块�
 
 Node里有以下这几种模块：
 - builtin module: node 中以 c++ 形式提供的模块
-- constants module: Node 中定义常量的模块
+- constants module: node 中定义常量的模块
 - native module: node 中以js 形式提供的模块
 - 第三方模块: 以上模块统称node内建模块，除此之外即为第三方模块。
 
